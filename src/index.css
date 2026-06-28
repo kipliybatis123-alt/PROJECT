@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+@layer base {
+  body {
+    font-family: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: #0a0f1a;
+    color: #f0f4ff;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --clr-bg:        #0a0f1a;
+  --clr-surface:   #111827;
+  --clr-border:    #1e2d40;
+  --clr-accent:    #10b981;
+  --clr-accent2:   #059669;
+  --clr-text:      #f0f4ff;
+  --clr-muted:     #6b7280;
+  --clr-subtle:    #9ca3af;
+}
+
+#root {
+  width: 100%;
+  max-width: 100%;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
