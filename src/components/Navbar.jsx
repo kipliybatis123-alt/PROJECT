@@ -32,7 +32,7 @@ const Navbar = () => {
       {/* Nav Links */}
       <div style={{ display: "flex", gap: "28px" }}>
         {[
-          { label: "Beranda", href: "#hero" },
+          { label: "Beranda", href: "#home" },
           { label: "Jenis", href: "#jenis" },
           { label: "Katalog", href: "#portofolio" },
           { label: "Tentang", href: "#tentang" },
