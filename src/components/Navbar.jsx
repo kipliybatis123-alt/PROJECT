@@ -26,7 +26,7 @@ const Navbar = () => {
     >
       {/* Logo */}
       <a href="#home" style={{ textDecoration: "none", fontSize: "15px", fontWeight: 500, color: "#0b0b0b", letterSpacing: "-0.3px" }}>
-        pintu<span style={{ color: "#888" }}>.material</span>
+        EleganceWood<span style={{ color: "#888" }}>.Indonesia</span>
       </a>
 
       {/* Nav Links */}
