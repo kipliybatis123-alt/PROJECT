@@ -34,7 +34,7 @@ const Navbar = () => {
         {[
           { label: "Produk", href: "#produk" },
           { label: "Jenis", href: "#jenis" },
-          { label: "Portofolio", href: "#portofolio" },
+          { label: "Katalog", href: "#portofolio" },
           { label: "Tentang", href: "#tentang" },
           { label: "Kontak", href: "#kontak" },
         ].map((item) => (
