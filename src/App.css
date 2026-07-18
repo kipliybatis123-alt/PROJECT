@@ -1,2 +1,3 @@
-/* EleganceWood Indonesia - Global resets only */
+/* EleganceWood Indonesia — Global resets only.
+   All theming lives in index.css (:root CSS variables). */
 * { margin: 0; padding: 0; box-sizing: border-box; }

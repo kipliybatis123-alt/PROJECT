@@ -4,6 +4,7 @@ import DashboardMockup from "./components/DashboardMockup"
 import Portofolio from "./components/Portofolio"
 import About from "./components/About"
 import Contact from "./components/Contact"
+import WhatsAppFloat from "./components/WhatsAppFloat"
 
 function App() {
   return (
@@ -17,6 +18,8 @@ function App() {
         <About />
         <Contact />
       </main>
+
+      <WhatsAppFloat />
     </>
   )
 }
