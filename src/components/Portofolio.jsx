@@ -94,9 +94,9 @@ const Portofolio = () => {
   return (
     <section
       id="portofolio"
-      style={{ background: c.bg, paddingTop: "64px", paddingBottom: "64px", fontFamily: c.fontBody }}
+      style={{ background: c.bg, paddingTop: "48px", paddingBottom: "48px", fontFamily: c.fontBody }}
     >
-      <div style={{ maxWidth: "1280px", margin: "0 auto", padding: "0 32px" }}>
+      <div className="px-4 sm:px-6 lg:px-8" style={{ maxWidth: "1280px", margin: "0 auto" }}>
 
         {/* Header */}
         <div style={{ marginBottom: "40px" }}>
@@ -116,9 +116,9 @@ const Portofolio = () => {
         {/* Featured Card */}
         {featured && (
           <div
+            className="grid grid-cols-1 sm:grid-cols-2"
             style={{
               ...cardBase,
-              display: "grid", gridTemplateColumns: "1fr 1fr",
               overflow: "hidden", marginBottom: "12px",
             }}
             onMouseEnter={hoverIn}
@@ -141,7 +141,7 @@ const Portofolio = () => {
                 </button>
               )}
             </div>
-            <div style={{ padding: "32px" }}>
+            <div style={{ padding: "22px" }}>
               <p style={{ fontSize: "11px", fontWeight: 600, color: c.muted, letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: "10px" }}>Unggulan</p>
               <p style={{ fontFamily: c.fontHeading, fontSize: "20px", fontWeight: 700, color: c.heading, lineHeight: 1.2 }}>{featured.title}</p>
               <p style={{ fontSize: "13px", color: c.body, lineHeight: 1.7, marginTop: "12px" }}>{featured.desc}</p>

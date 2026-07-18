@@ -20,16 +20,19 @@ const cardShadow = "0 4px 20px rgba(31,41,51,0.05)";
 
 const DashboardMockup = () => {
   return (
-    <div style={{ fontFamily: c.fontBody, background: c.bg, paddingBottom: "48px" }}>
+    <div style={{ fontFamily: c.fontBody, background: c.bg, paddingBottom: "40px" }}>
 
       {/* Hero */}
-      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", minHeight: "380px" }}>
-        <div style={{ padding: "48px 40px 40px 32px", background: c.surface, borderRight: `0.5px solid ${c.border}`, display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
+      <div className="grid grid-cols-1 md:grid-cols-2">
+        <div
+          className="px-5 sm:px-6 lg:px-8"
+          style={{ paddingTop: "40px", paddingBottom: "32px", background: c.surface, borderRight: "none", display: "flex", flexDirection: "column", justifyContent: "space-between" }}
+        >
           <div>
             <p style={{ fontSize: "11px", fontWeight: 600, letterSpacing: "0.1em", color: c.primary, textTransform: "uppercase", marginBottom: "16px" }}>
               Katalog Material Pintu Premium
             </p>
-            <h1 style={{ fontFamily: c.fontHeading, fontSize: "clamp(28px, 4vw, 42px)", fontWeight: 700, lineHeight: 1.05, letterSpacing: "-1.5px", color: c.heading, margin: 0 }}>
+            <h1 style={{ fontFamily: c.fontHeading, fontSize: "clamp(26px, 5vw, 42px)", fontWeight: 700, lineHeight: 1.1, letterSpacing: "-1px", color: c.heading, margin: 0 }}>
               Satu mitra,<br />segala <span style={{ color: c.muted }}>kebutuhan</span><br />material pintu.
             </h1>
             <p style={{ fontSize: "14px", color: c.body, lineHeight: 1.7, marginTop: "20px", maxWidth: "360px" }}>
@@ -55,14 +58,17 @@ const DashboardMockup = () => {
           </div>
         </div>
 
-        <div style={{ padding: "40px 32px", background: c.bgAlt, display: "flex", flexDirection: "column", justifyContent: "center", gap: "16px" }}>
+        <div
+          className="px-5 sm:px-6 lg:px-8 border-t md:border-t-0 md:border-l"
+          style={{ paddingTop: "28px", paddingBottom: "28px", background: c.bgAlt, display: "flex", flexDirection: "column", justifyContent: "center", gap: "14px", borderColor: c.border }}
+        >
           {[
             { val: "12+", label: "Kategori material tersedia", sub: "Dari kayu, logam, hingga kaca dan komposit" },
             { val: "500+", label: "Varian model & finishing", sub: "Panel, flush, geser, lipat, dan lainnya" },
             { val: "15thn", label: "Pengalaman melayani klien", sub: "Ditopang mutu terjaga dan garansi material" },
           ].map(({ val, label, sub }) => (
-            <div key={val} style={{ background: c.surface, borderRadius: "16px", padding: "20px 24px", border: `0.5px solid ${c.border}`, boxShadow: cardShadow }}>
-              <div style={{ fontFamily: c.fontHeading, fontSize: "28px", fontWeight: 700, color: c.primary, letterSpacing: "-1px" }}>{val}</div>
+            <div key={val} style={{ background: c.surface, borderRadius: "16px", padding: "18px 20px", border: `0.5px solid ${c.border}`, boxShadow: cardShadow }}>
+              <div style={{ fontFamily: c.fontHeading, fontSize: "26px", fontWeight: 700, color: c.primary, letterSpacing: "-1px" }}>{val}</div>
               <div style={{ fontSize: "12px", color: c.heading, marginTop: "4px" }}>{label}</div>
               <div style={{ fontSize: "11px", color: c.faint, marginTop: "2px" }}>{sub}</div>
             </div>
@@ -71,10 +77,10 @@ const DashboardMockup = () => {
       </div>
 
       {/* Card Grid */}
-      <div style={{ display: "grid", gridTemplateColumns: "2fr 1fr 1fr", gap: "12px", padding: "12px 32px 0" }}>
+      <div className="grid grid-cols-1 md:grid-cols-4 px-4 sm:px-6 lg:px-8" style={{ gap: "12px", paddingTop: "12px" }}>
 
         {/* Card Utama */}
-        <div style={{ background: c.surface, borderRadius: "16px", border: `0.5px solid ${c.border}`, overflow: "hidden", boxShadow: cardShadow }}>
+        <div className="md:col-span-2" style={{ background: c.surface, borderRadius: "16px", border: `0.5px solid ${c.border}`, overflow: "hidden", boxShadow: cardShadow }}>
           <div style={{ height: "120px", background: c.tint, display: "flex", alignItems: "center", justifyContent: "center" }}>
             <svg width="100" height="72" viewBox="0 0 100 72" fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect x="8" y="6" width="36" height="60" rx="3" stroke={c.primaryDark} strokeWidth="1.5" fill="none" />
@@ -86,7 +92,7 @@ const DashboardMockup = () => {
               <line x1="74" y1="6" x2="74" y2="66" stroke={c.primaryDark} strokeWidth="0.8" opacity="0.4" />
             </svg>
           </div>
-          <div style={{ padding: "24px" }}>
+          <div style={{ padding: "22px" }}>
             <p style={{ fontSize: "11px", fontWeight: 600, color: c.muted, letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: "10px" }}>Material unggulan</p>
             <p style={{ fontFamily: c.fontHeading, fontSize: "16px", fontWeight: 700, color: c.heading, lineHeight: 1.3 }}>Pintu kayu solid & engineered wood</p>
             <p style={{ fontSize: "13px", color: c.body, lineHeight: 1.6, marginTop: "8px" }}>
@@ -102,7 +108,7 @@ const DashboardMockup = () => {
         </div>
 
         {/* Profile / Spesifikasi Card */}
-        <div style={{ background: c.surface, borderRadius: "16px", border: `0.5px solid ${c.border}`, padding: "24px", boxShadow: cardShadow }}>
+        <div className="md:col-span-1" style={{ background: c.surface, borderRadius: "16px", border: `0.5px solid ${c.border}`, padding: "22px", boxShadow: cardShadow }}>
           <div style={{ width: "52px", height: "52px", borderRadius: "14px", background: c.tint, display: "flex", alignItems: "center", justifyContent: "center" }}>
             <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect x="4" y="2" width="20" height="24" rx="2" stroke={c.primaryDark} strokeWidth="1.5" fill="none" />
@@ -140,13 +146,13 @@ const DashboardMockup = () => {
         </div>
 
         {/* 2 Card Kecil */}
-        <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
-          <div style={{ background: c.surface, borderRadius: "16px", border: `0.5px solid ${c.border}`, padding: "24px", flex: 1, boxShadow: cardShadow }}>
+        <div className="md:col-span-1 flex flex-col" style={{ gap: "12px" }}>
+          <div style={{ background: c.surface, borderRadius: "16px", border: `0.5px solid ${c.border}`, padding: "22px", flex: 1, boxShadow: cardShadow }}>
             <p style={{ fontSize: "11px", fontWeight: 600, color: c.muted, letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: "10px" }}>Material modern</p>
             <p style={{ fontFamily: c.fontHeading, fontSize: "16px", fontWeight: 700, color: c.heading, lineHeight: 1.3 }}>Pintu aluminium & UPVC</p>
             <p style={{ fontSize: "13px", color: c.body, lineHeight: 1.6, marginTop: "8px" }}>Bobot ringan, bebas karat, dan minim perawatan — pilihan tepat untuk pintu sliding, folding, serta area eksterior yang sering terpapar cuaca.</p>
           </div>
-          <div style={{ background: c.surface, borderRadius: "16px", border: `0.5px solid ${c.border}`, padding: "24px", flex: 1, boxShadow: cardShadow }}>
+          <div style={{ background: c.surface, borderRadius: "16px", border: `0.5px solid ${c.border}`, padding: "22px", flex: 1, boxShadow: cardShadow }}>
             <p style={{ fontSize: "11px", fontWeight: 600, color: c.muted, letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: "10px" }}>Aksesori & kaca</p>
             <p style={{ fontFamily: c.fontHeading, fontSize: "16px", fontWeight: 700, color: c.heading, lineHeight: 1.3 }}>Pintu kaca tempered</p>
             <p style={{ fontSize: "13px", color: c.body, lineHeight: 1.6, marginTop: "8px" }}>Ketebalan 8–12mm dengan pilihan clear, frosted, dan stopsol — menghadirkan kesan lapang dan modern pada pintu rumah maupun pintu kantor.</p>
@@ -155,18 +161,24 @@ const DashboardMockup = () => {
       </div>
 
       {/* CTA Strip */}
-      <div style={{ margin: "12px 32px 0", background: c.secondary, borderRadius: "16px", padding: "28px 32px", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-        <p style={{ fontFamily: c.fontHeading, fontSize: "20px", fontWeight: 700, color: "#fff", letterSpacing: "-0.5px" }}>
+      <div
+        className="mx-4 sm:mx-6 lg:mx-8 flex flex-col sm:flex-row sm:items-center sm:justify-between"
+        style={{ marginTop: "12px", background: c.secondary, borderRadius: "16px", padding: "24px 28px", gap: "16px" }}
+      >
+        <p style={{ fontFamily: c.fontHeading, fontSize: "18px", fontWeight: 700, color: "#fff", letterSpacing: "-0.5px" }}>
           Belum yakin material yang tepat? <span style={{ color: "rgba(255,255,255,0.65)", fontWeight: 500 }}>Tim kami siap membantu Anda memilih.</span>
         </p>
-        <button style={{ background: "#fff", color: c.primaryDark, border: "none", borderRadius: "24px", padding: "12px 28px", fontSize: "14px", fontFamily: c.fontBody, fontWeight: 600, cursor: "pointer", whiteSpace: "nowrap" }}>
+        <button
+          className="w-full sm:w-auto"
+          style={{ background: "#fff", color: c.primaryDark, border: "none", borderRadius: "24px", padding: "12px 28px", fontSize: "14px", fontFamily: c.fontBody, fontWeight: 600, cursor: "pointer", whiteSpace: "nowrap" }}
+        >
           Konsultasi gratis →
         </button>
       </div>
 
       {/* Bottom Row */}
-      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "12px", padding: "12px 32px 0" }}>
-        <div style={{ background: c.surface, borderRadius: "16px", border: `0.5px solid ${c.border}`, padding: "24px", boxShadow: cardShadow }}>
+      <div className="grid grid-cols-1 md:grid-cols-2 px-4 sm:px-6 lg:px-8" style={{ gap: "12px", paddingTop: "12px" }}>
+        <div style={{ background: c.surface, borderRadius: "16px", border: `0.5px solid ${c.border}`, padding: "22px", boxShadow: cardShadow }}>
           <p style={{ fontSize: "11px", fontWeight: 600, color: c.muted, letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: "10px" }}>Jenis pintu tersedia</p>
           {["Pintu panel kayu solid", "Pintu flush HDF / MDF", "Pintu geser (sliding)", "Pintu lipat (folding)", "Pintu baja & security door", "Pintu kaca frameless"].map((item) => (
             <div key={item} style={{ display: "flex", alignItems: "center", gap: "10px", fontSize: "13px", color: c.body, padding: "9px 0", borderBottom: `0.5px solid ${c.border}` }}>
@@ -175,7 +187,7 @@ const DashboardMockup = () => {
             </div>
           ))}
         </div>
-        <div style={{ background: c.surface, borderRadius: "16px", border: `0.5px solid ${c.border}`, padding: "24px", boxShadow: cardShadow }}>
+        <div style={{ background: c.surface, borderRadius: "16px", border: `0.5px solid ${c.border}`, padding: "22px", boxShadow: cardShadow }}>
           <p style={{ fontSize: "11px", fontWeight: 600, color: c.muted, letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: "10px" }}>Testimoni Klien</p>
           <p style={{ fontSize: "14px", color: c.body, fontWeight: 400, lineHeight: 1.6, marginTop: "4px" }}>
             "Kami sudah tiga tahun memakai pintu kayu jati dari EleganceWood untuk proyek perumahan, dan hasil finishing duco-nya masih rapi sampai sekarang. Pengirimannya juga tepat waktu."

@@ -81,9 +81,9 @@ const Contact = () => {
   return (
     <section
       id="kontak"
-      style={{ background: c.bg, paddingTop: "64px", paddingBottom: "64px", fontFamily: c.fontBody, borderTop: `0.5px solid ${c.border}` }}
+      style={{ background: c.bg, paddingTop: "48px", paddingBottom: "48px", fontFamily: c.fontBody, borderTop: `0.5px solid ${c.border}` }}
     >
-      <div style={{ maxWidth: "1280px", margin: "0 auto", padding: "0 32px" }}>
+      <div className="px-4 sm:px-6 lg:px-8" style={{ maxWidth: "1280px", margin: "0 auto" }}>
 
         {/* Header */}
         <div style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "16px" }}>
@@ -104,7 +104,7 @@ const Contact = () => {
         <div style={{ borderTop: `0.5px solid ${c.border}`, marginTop: "40px" }} />
 
         {/* Channel Grid */}
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: "12px", marginBottom: "40px" }}>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4" style={{ gap: "12px", marginBottom: "40px" }}>
           {channels.map((item, i) => (
             <a
               key={i}
@@ -143,12 +143,14 @@ const Contact = () => {
 
         {/* Form */}
         <div
+          className="px-5 sm:px-8 lg:px-10"
           style={{
             marginTop: "40px",
             background: c.surface,
             border: `0.5px solid ${c.border}`,
             borderRadius: "16px",
-            padding: "40px",
+            paddingTop: "32px",
+            paddingBottom: "32px",
             boxShadow: "0 4px 24px rgba(31,41,51,0.05)",
           }}
         >
@@ -195,7 +197,7 @@ const Contact = () => {
             <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
 
               {/* Row 1 */}
-              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "16px" }}>
+              <div className="grid grid-cols-1 sm:grid-cols-2" style={{ gap: "16px" }}>
                 <div>
                   <label style={labelStyle}>First Name</label>
                   <input
@@ -223,7 +225,7 @@ const Contact = () => {
               </div>
 
               {/* Row 2 */}
-              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "16px" }}>
+              <div className="grid grid-cols-1 sm:grid-cols-2" style={{ gap: "16px" }}>
                 <div>
                   <label style={labelStyle}>Email</label>
                   <input
@@ -267,9 +269,10 @@ const Contact = () => {
               </div>
 
               {/* Submit */}
-              <div style={{ display: "flex", justifyContent: "flex-end" }}>
+              <div className="flex justify-end">
                 <button
                   onClick={handleSubmit}
+                  className="w-full sm:w-auto"
                   style={{
                     background: c.primaryDark, color: "#fff",
                     border: "none", borderRadius: "20px",
@@ -290,13 +293,12 @@ const Contact = () => {
 
         {/* Footer */}
         <div
+          className="flex flex-col items-center text-center sm:flex-row sm:items-center sm:justify-between sm:text-left"
           style={{
             borderTop: `0.5px solid ${c.border}`,
             marginTop: "48px",
             paddingTop: "28px",
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
+            gap: "12px",
           }}
         >
           <div style={{ fontFamily: c.fontHeading, fontSize: "15px", fontWeight: 700, color: c.heading, letterSpacing: "-0.3px" }}>

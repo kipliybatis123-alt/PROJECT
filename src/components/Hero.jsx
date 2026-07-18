@@ -23,13 +23,13 @@ const Hero = () => {
       {/* ═══════════════════════════════════════════
           HERO UTAMA — full-width image + teks overlay
       ═══════════════════════════════════════════ */}
-      <div style={{ padding: "32px 32px 0" }}>
+      <div className="px-4 sm:px-6 lg:px-8" style={{ paddingTop: "24px" }}>
         <div
+          className="min-h-[440px] sm:min-h-[520px] lg:min-h-[600px]"
           style={{
             position: "relative",
-            borderRadius: "24px",
+            borderRadius: "20px",
             overflow: "hidden",
-            minHeight: "600px",
             display: "flex",
             alignItems: "flex-end",
             boxShadow: "0 8px 32px rgba(31,41,51,0.10)",
@@ -72,10 +72,12 @@ const Hero = () => {
 
           {/* ── Konten Teks Kiri ── */}
           <div
+            className="px-5 sm:px-8 lg:px-12"
             style={{
               position: "relative",
               zIndex: 2,
-              padding: "48px 48px 96px",
+              paddingTop: "32px",
+              paddingBottom: "56px",
               maxWidth: "660px",
             }}
           >
@@ -87,7 +89,7 @@ const Hero = () => {
                 backdropFilter: "blur(8px)",
                 border: "0.5px solid rgba(255,255,255,0.3)",
                 borderRadius: "20px", padding: "6px 14px",
-                marginBottom: "24px",
+                marginBottom: "20px",
               }}
             >
               <span style={{ width: "6px", height: "6px", borderRadius: "50%", background: c.accent, display: "inline-block" }} />
@@ -100,12 +102,12 @@ const Hero = () => {
             <h1
               style={{
                 fontFamily: c.fontHeading,
-                fontSize: "clamp(32px, 4.5vw, 62px)",
+                fontSize: "clamp(28px, 6vw, 62px)",
                 fontWeight: 700,
-                lineHeight: 1.06,
-                letterSpacing: "-2px",
+                lineHeight: 1.1,
+                letterSpacing: "-1px",
                 color: "#fff",
-                margin: "0 0 20px",
+                margin: "0 0 16px",
               }}
             >
               Material Pintu Premium<br />
@@ -115,11 +117,11 @@ const Hero = () => {
             {/* Description */}
             <p
               style={{
-                fontSize: "15px",
+                fontSize: "14px",
                 color: "rgba(255,255,255,0.75)",
                 lineHeight: 1.7,
                 maxWidth: "480px",
-                margin: "0 0 32px",
+                margin: "0 0 28px",
               }}
             >
               EleganceWood Indonesia adalah distributor dan supplier material pintu premium yang dipercaya kontraktor, arsitek, dan pemilik properti di seluruh Indonesia. Kami menghadirkan pintu kayu solid, pintu aluminium, pintu UPVC, hingga pintu kaca dengan kualitas material terpilih, presisi produksi, dan hasil akhir yang tahan lama untuk kebutuhan pintu rumah maupun pintu kantor.
@@ -134,7 +136,7 @@ const Hero = () => {
                     color: c.primaryDark,
                     border: "none",
                     borderRadius: "24px",
-                    padding: "13px 28px",
+                    padding: "13px 24px",
                     fontSize: "13px",
                     fontFamily: c.fontBody,
                     fontWeight: 600,
@@ -156,7 +158,7 @@ const Hero = () => {
                     color: "#fff",
                     border: "0.5px solid rgba(255,255,255,0.35)",
                     borderRadius: "24px",
-                    padding: "13px 28px",
+                    padding: "13px 24px",
                     fontSize: "13px",
                     fontFamily: c.fontBody,
                     fontWeight: 500,
@@ -178,13 +180,12 @@ const Hero = () => {
       {/* ═══════════════════════════════════════════
           STATS ROW — kartu mengambang, overlap ke gambar hero
       ═══════════════════════════════════════════ */}
-      <div style={{ padding: "0 32px", marginTop: "-56px", position: "relative", zIndex: 3 }}>
+      <div className="px-4 sm:px-6 lg:px-8 -mt-6 sm:-mt-10 lg:-mt-14" style={{ position: "relative", zIndex: 3 }}>
         <div
+          className="grid grid-cols-1 sm:grid-cols-3"
           style={{
-            display: "grid",
-            gridTemplateColumns: "1fr 1fr 1fr",
             background: c.surface,
-            borderRadius: "20px",
+            borderRadius: "18px",
             border: `0.5px solid ${c.border}`,
             overflow: "hidden",
             boxShadow: "0 16px 40px rgba(31,41,51,0.12)",
@@ -209,20 +210,23 @@ const Hero = () => {
           ].map(({ val, label, sub }, i) => (
             <div
               key={val}
+              className={i < 2 ? "border-b sm:border-b-0 sm:border-r" : ""}
               style={{
-                padding: "28px 32px",
-                borderRight: i < 2 ? `0.5px solid ${c.border}` : "none",
+                padding: "22px 24px",
+                borderColor: c.border,
+                borderWidth: i < 2 ? "0.5px" : "0",
+                borderStyle: "solid",
                 borderTop: `3px solid ${i === 1 ? c.accent : "transparent"}`,
               }}
             >
-              <div style={{ fontFamily: c.fontHeading, fontSize: "32px", fontWeight: 700, color: c.primary, letterSpacing: "-1.5px", lineHeight: 1 }}>{val}</div>
+              <div style={{ fontFamily: c.fontHeading, fontSize: "28px", fontWeight: 700, color: c.primary, letterSpacing: "-1.5px", lineHeight: 1 }}>{val}</div>
               <div style={{ fontSize: "13px", color: c.heading, marginTop: "8px", fontWeight: 500 }}>{label}</div>
               <div style={{ fontSize: "11px", color: c.faint, marginTop: "3px" }}>{sub}</div>
             </div>
           ))}
         </div>
       </div>
-      <div style={{ height: "56px" }} />
+      <div style={{ height: "48px" }} />
     </section>
   );
 };

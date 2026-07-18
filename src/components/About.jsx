@@ -31,9 +31,9 @@ const About = () => {
   return (
     <section
       id="tentang"
-      style={{ background: c.surface, paddingTop: "64px", paddingBottom: "64px", fontFamily: c.fontBody, borderTop: `0.5px solid ${c.border}` }}
+      style={{ background: c.surface, paddingTop: "48px", paddingBottom: "48px", fontFamily: c.fontBody, borderTop: `0.5px solid ${c.border}` }}
     >
-      <div style={{ maxWidth: "1280px", margin: "0 auto", padding: "0 32px" }}>
+      <div className="px-4 sm:px-6 lg:px-8" style={{ maxWidth: "1280px", margin: "0 auto" }}>
 
         {/* Label */}
         <div style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "16px" }}>
@@ -49,7 +49,7 @@ const About = () => {
 
         <div style={{ borderTop: `0.5px solid ${c.border}`, marginTop: "40px" }} />
 
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "64px", marginTop: "40px" }}>
+        <div className="grid grid-cols-1 lg:grid-cols-2" style={{ gap: "40px", marginTop: "40px" }}>
 
           {/* Left */}
           <div>
@@ -105,9 +105,10 @@ const About = () => {
             </div>
 
             <div
+              className="flex flex-col sm:flex-row sm:items-center sm:justify-between"
               style={{
                 marginTop: "12px",
-                display: "flex", alignItems: "center", justifyContent: "space-between",
+                gap: "16px",
                 padding: "20px 24px",
                 background: c.secondary,
                 borderRadius: "16px",
@@ -117,11 +118,12 @@ const About = () => {
                 <p style={{ fontSize: "14px", fontWeight: 600, color: "#fff" }}>Butuh bantuan menentukan material?</p>
                 <p style={{ fontSize: "11px", marginTop: "2px", color: "rgba(255,255,255,0.6)" }}>Senin–Sabtu · 08.00–17.00 WIB</p>
               </div>
-              <a href="#kontak">
+              <a href="#kontak" className="w-full sm:w-auto">
                 <button
+                  className="w-full sm:w-auto"
                   style={{
                     fontSize: "12px", fontWeight: 600,
-                    padding: "8px 20px",
+                    padding: "10px 20px",
                     background: "#fff",
                     color: c.secondary,
                     border: "none",

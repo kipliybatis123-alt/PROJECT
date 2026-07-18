@@ -10,13 +10,10 @@ const WhatsAppFloat = () => {
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Chat via WhatsApp"
+      className="right-4 bottom-4 w-12 h-12 sm:right-6 sm:bottom-6 sm:w-14 sm:h-14"
       style={{
         position: "fixed",
-        right: "24px",
-        bottom: "24px",
         zIndex: 60,
-        width: "56px",
-        height: "56px",
         borderRadius: "50%",
         background: "#2F5D50",
         display: "flex",
