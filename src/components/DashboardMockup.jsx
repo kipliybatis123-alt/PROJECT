@@ -5,15 +5,15 @@ const DashboardMockup = () => {
       {/* Nav */}
       <nav style={{ display: "flex", alignItems: "center", justifyContent: "space-between", padding: "20px 32px", background: "#fff", borderBottom: "0.5px solid #e8e6e0" }}>
         <div style={{ fontSize: "15px", fontWeight: 500, color: "#0b0b0b", letterSpacing: "-0.3px" }}>
-          pintu<span style={{ color: "#888" }}>.material</span>
+          EleganceWood<span style={{ color: "#888" }}>.Indonesia</span>
         </div>
         <div style={{ display: "flex", gap: "24px" }}>
-          {["Produk", "Jenis", "Spesifikasi"].map((item) => (
+          {["Produk", "Jenis Pintu", "Spesifikasi"].map((item) => (
             <a key={item} href="#" style={{ fontSize: "13px", color: "#555", textDecoration: "none" }}>{item}</a>
           ))}
         </div>
         <button style={{ background: "#0b0b0b", color: "#fff", border: "none", borderRadius: "20px", padding: "8px 20px", fontSize: "13px", cursor: "pointer" }}>
-          Minta penawaran
+          Minta Penawaran
         </button>
       </nav>
 
@@ -22,13 +22,13 @@ const DashboardMockup = () => {
         <div style={{ padding: "48px 40px 40px 32px", background: "#fff", borderRight: "0.5px solid #e8e6e0", display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
           <div>
             <p style={{ fontSize: "11px", fontWeight: 500, letterSpacing: "0.1em", color: "#888", textTransform: "uppercase", marginBottom: "16px" }}>
-              Katalog Material Pintu
+              Katalog Material Pintu Premium
             </p>
             <h1 style={{ fontSize: "clamp(28px, 4vw, 42px)", fontWeight: 500, lineHeight: 1.05, letterSpacing: "-1.5px", color: "#0b0b0b", margin: 0 }}>
-              Kualitas<br />premium, <span style={{ color: "#aaa" }}>pilihan</span><br />tepat.
+              Satu mitra,<br />segala <span style={{ color: "#aaa" }}>kebutuhan</span><br />material pintu.
             </h1>
             <p style={{ fontSize: "14px", color: "#777", lineHeight: 1.7, marginTop: "20px", maxWidth: "360px" }}>
-              Kami menghadirkan berbagai material pintu berkualitas tinggi — dari kayu solid hingga aluminium dan UPVC — untuk hunian dan komersial.
+              Sebagai distributor dan supplier pintu terpercaya, kami menghadirkan pintu kayu, pintu aluminium, pintu UPVC, hingga pintu kaca dalam satu katalog lengkap — siap mendukung proyek hunian maupun komersial dari tahap perencanaan hingga pemasangan.
             </p>
             <div style={{ display: "flex", gap: "8px", flexWrap: "wrap", marginTop: "24px" }}>
               {[
@@ -52,9 +52,9 @@ const DashboardMockup = () => {
 
         <div style={{ padding: "40px 32px", background: "#f8f7f4", display: "flex", flexDirection: "column", justifyContent: "center", gap: "16px" }}>
           {[
-            { val: "12+", label: "Jenis material tersedia", sub: "Dari kayu, logam, hingga komposit" },
-            { val: "500+", label: "Model & finishing", sub: "Panel, flush, geser, lipat, dan lainnya" },
-            { val: "15thn", label: "Garansi material premium", sub: "Anti rayap, anti karat, weatherproof" },
+            { val: "12+", label: "Kategori material tersedia", sub: "Dari kayu, logam, hingga kaca dan komposit" },
+            { val: "500+", label: "Varian model & finishing", sub: "Panel, flush, geser, lipat, dan lainnya" },
+            { val: "15thn", label: "Pengalaman melayani klien", sub: "Ditopang mutu terjaga dan garansi material" },
           ].map(({ val, label, sub }) => (
             <div key={val} style={{ background: "#fff", borderRadius: "16px", padding: "20px 24px", border: "0.5px solid #e8e6e0" }}>
               <div style={{ fontSize: "28px", fontWeight: 500, color: "#0b0b0b", letterSpacing: "-1px" }}>{val}</div>
@@ -83,9 +83,9 @@ const DashboardMockup = () => {
           </div>
           <div style={{ padding: "24px" }}>
             <p style={{ fontSize: "11px", fontWeight: 500, color: "#aaa", letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: "10px" }}>Material unggulan</p>
-            <p style={{ fontSize: "16px", fontWeight: 500, color: "#0b0b0b", lineHeight: 1.3 }}>Kayu solid & engineered wood</p>
+            <p style={{ fontSize: "16px", fontWeight: 500, color: "#0b0b0b", lineHeight: 1.3 }}>Pintu kayu solid & engineered wood</p>
             <p style={{ fontSize: "13px", color: "#888", lineHeight: 1.6, marginTop: "8px" }}>
-              Kayu jati, merbau, dan pinus pilihan — tersedia dalam finishing natural, duco, dan HPL. Cocok untuk pintu utama, kamar, maupun kamar mandi.
+              Kayu jati, merbau, dan pinus pilihan dengan serat rapat dan struktur stabil, sehingga tidak mudah melengkung meski digunakan bertahun-tahun. Tersedia dalam finishing natural, duco, dan HPL untuk pintu utama, kamar, hingga kamar mandi.
             </p>
             <div style={{ display: "flex", flexWrap: "wrap", gap: "6px", marginTop: "12px" }}>
               {["Jati", "Merbau", "Pinus", "Sungkai"].map((t) => (
@@ -106,8 +106,8 @@ const DashboardMockup = () => {
               <line x1="8" y1="16" x2="14" y2="16" stroke="#888" strokeWidth="1" />
             </svg>
           </div>
-          <p style={{ fontSize: "15px", fontWeight: 500, color: "#0b0b0b", marginTop: "12px" }}>Spesifikasi material</p>
-          <p style={{ fontSize: "12px", color: "#888", marginTop: "3px" }}>Standar SNI & internasional</p>
+          <p style={{ fontSize: "15px", fontWeight: 500, color: "#0b0b0b", marginTop: "12px" }}>Spesifikasi & standar mutu</p>
+          <p style={{ fontSize: "12px", color: "#888", marginTop: "3px" }}>Diuji sesuai standar SNI & internasional</p>
           <div style={{ display: "flex", gap: "20px", marginTop: "20px", paddingTop: "16px", borderTop: "0.5px solid #f0ede8" }}>
             {[{ val: "E1", key: "Emisi" }, { val: "V0", key: "Fire rate" }].map(({ val, key }) => (
               <div key={key}>
@@ -138,13 +138,13 @@ const DashboardMockup = () => {
         <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
           <div style={{ background: "#fff", borderRadius: "16px", border: "0.5px solid #e8e6e0", padding: "24px", flex: 1 }}>
             <p style={{ fontSize: "11px", fontWeight: 500, color: "#aaa", letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: "10px" }}>Material modern</p>
-            <p style={{ fontSize: "16px", fontWeight: 500, color: "#0b0b0b", lineHeight: 1.3 }}>Aluminium & UPVC</p>
-            <p style={{ fontSize: "13px", color: "#888", lineHeight: 1.6, marginTop: "8px" }}>Ringan, anti karat, dan perawatan minimal. Ideal untuk pintu sliding, folding, dan eksterior.</p>
+            <p style={{ fontSize: "16px", fontWeight: 500, color: "#0b0b0b", lineHeight: 1.3 }}>Pintu aluminium & UPVC</p>
+            <p style={{ fontSize: "13px", color: "#888", lineHeight: 1.6, marginTop: "8px" }}>Bobot ringan, bebas karat, dan minim perawatan — pilihan tepat untuk pintu sliding, folding, serta area eksterior yang sering terpapar cuaca.</p>
           </div>
           <div style={{ background: "#fff", borderRadius: "16px", border: "0.5px solid #e8e6e0", padding: "24px", flex: 1 }}>
             <p style={{ fontSize: "11px", fontWeight: 500, color: "#aaa", letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: "10px" }}>Aksesori & kaca</p>
-            <p style={{ fontSize: "16px", fontWeight: 500, color: "#0b0b0b", lineHeight: 1.3 }}>Kaca tempered & panel kaca</p>
-            <p style={{ fontSize: "13px", color: "#888", lineHeight: 1.6, marginTop: "8px" }}>Kaca 8–12mm, frosted, clear, dan stopsol untuk pintu modern bergaya.</p>
+            <p style={{ fontSize: "16px", fontWeight: 500, color: "#0b0b0b", lineHeight: 1.3 }}>Pintu kaca tempered</p>
+            <p style={{ fontSize: "13px", color: "#888", lineHeight: 1.6, marginTop: "8px" }}>Ketebalan 8–12mm dengan pilihan clear, frosted, dan stopsol — menghadirkan kesan lapang dan modern pada pintu rumah maupun pintu kantor.</p>
           </div>
         </div>
       </div>
@@ -152,17 +152,17 @@ const DashboardMockup = () => {
       {/* CTA Strip */}
       <div style={{ margin: "12px 32px 0", background: "#0b0b0b", borderRadius: "16px", padding: "28px 32px", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
         <p style={{ fontSize: "20px", fontWeight: 500, color: "#fff", letterSpacing: "-0.5px" }}>
-          Butuh konsultasi? <span style={{ color: "#666" }}>Kami bantu pilih material yang tepat.</span>
+          Belum yakin material yang tepat? <span style={{ color: "#666" }}>Tim kami siap membantu Anda memilih.</span>
         </p>
         <button style={{ background: "#fff", color: "#0b0b0b", border: "none", borderRadius: "24px", padding: "12px 28px", fontSize: "14px", fontWeight: 500, cursor: "pointer", whiteSpace: "nowrap" }}>
-          Hubungi kami →
+          Konsultasi gratis →
         </button>
       </div>
 
       {/* Bottom Row */}
       <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "12px", padding: "12px 32px 0" }}>
         <div style={{ background: "#fff", borderRadius: "16px", border: "0.5px solid #e8e6e0", padding: "24px" }}>
-          <p style={{ fontSize: "11px", fontWeight: 500, color: "#aaa", letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: "10px" }}>Jenis pintu</p>
+          <p style={{ fontSize: "11px", fontWeight: 500, color: "#aaa", letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: "10px" }}>Jenis pintu tersedia</p>
           {["Pintu panel kayu solid", "Pintu flush HDF / MDF", "Pintu geser (sliding)", "Pintu lipat (folding)", "Pintu baja & security door", "Pintu kaca frameless"].map((item) => (
             <div key={item} style={{ display: "flex", alignItems: "center", gap: "10px", fontSize: "13px", color: "#555", padding: "9px 0", borderBottom: "0.5px solid #f0ede8" }}>
               <span style={{ width: "6px", height: "6px", borderRadius: "50%", background: "#0b0b0b", flexShrink: 0 }} />
@@ -171,9 +171,9 @@ const DashboardMockup = () => {
           ))}
         </div>
         <div style={{ background: "#fff", borderRadius: "16px", border: "0.5px solid #e8e6e0", padding: "24px" }}>
-          <p style={{ fontSize: "11px", fontWeight: 500, color: "#aaa", letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: "10px" }}>Testimoni</p>
+          <p style={{ fontSize: "11px", fontWeight: 500, color: "#aaa", letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: "10px" }}>Testimoni Klien</p>
           <p style={{ fontSize: "14px", color: "#555", fontWeight: 400, lineHeight: 1.6, marginTop: "4px" }}>
-            "Material kayu jatinya sangat solid, finishing duco-nya rapi dan tahan lama. Sudah 3 tahun tidak ada masalah sama sekali."
+            "Kami sudah tiga tahun memakai pintu kayu jati dari EleganceWood untuk proyek perumahan, dan hasil finishing duco-nya masih rapi sampai sekarang. Pengirimannya juga tepat waktu."
           </p>
           <div style={{ display: "flex", alignItems: "center", gap: "10px", marginTop: "16px" }}>
             <div style={{ width: "32px", height: "32px", borderRadius: "50%", background: "#e8e5df", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "12px", color: "#888" }}>BW</div>

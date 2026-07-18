@@ -1,9 +1,9 @@
 const About = () => {
   const keunggulan = [
-    { label: "Material Bersertifikat", sub: "SNI, ISO, dan standar internasional" },
-    { label: "Garansi 15 Tahun", sub: "Anti rayap, anti karat, dan weatherproof" },
-    { label: "Pengiriman Nasional", sub: "Ke seluruh kota besar di Indonesia" },
-    { label: "Konsultasi Gratis", sub: "Tim ahli siap bantu pilih material" },
+    { label: "Material Bersertifikat", sub: "Memenuhi standar SNI, ISO, dan standar internasional" },
+    { label: "Garansi hingga 15 Tahun", sub: "Perlindungan terhadap rayap, karat, dan cuaca" },
+    { label: "Pengiriman ke Seluruh Indonesia", sub: "Menjangkau kota-kota besar dan area proyek" },
+    { label: "Konsultasi Gratis", sub: "Didampingi tim ahli material dalam menentukan pilihan" },
   ];
 
   const keahlian = [
@@ -28,7 +28,7 @@ const About = () => {
         </div>
 
         <h2 style={{ fontSize: "clamp(24px, 3vw, 36px)", fontWeight: 500, color: "#0b0b0b", letterSpacing: "-1px", margin: 0, lineHeight: 1.1 }}>
-          Spesialis material pintu<br /><span style={{ color: "#aaa" }}>sejak 2008.</span>
+          Distributor pintu terpercaya<br /><span style={{ color: "#aaa" }}>sejak 2008.</span>
         </h2>
 
         <div style={{ borderTop: "0.5px solid #e8e6e0", marginTop: "40px" }} />
@@ -38,10 +38,10 @@ const About = () => {
           {/* Left */}
           <div>
             <p style={{ fontSize: "14px", color: "#777", lineHeight: 1.75 }}>
-              Kami adalah distributor dan produsen material pintu berkualitas tinggi yang telah melayani kontraktor, arsitek, dan pemilik hunian di seluruh Indonesia selama lebih dari 15 tahun.
+              EleganceWood Indonesia adalah distributor dan supplier material pintu premium yang telah melayani kontraktor, arsitek, dan pemilik hunian di seluruh Indonesia selama lebih dari 15 tahun. Kami memahami bahwa pintu bukan sekadar pelengkap bangunan, melainkan elemen yang menentukan kesan pertama dan kenyamanan jangka panjang sebuah ruang.
             </p>
             <p style={{ marginTop: "20px", fontSize: "14px", color: "#777", lineHeight: 1.75 }}>
-              Dengan koleksi material dari kayu solid premium hingga aluminium modern dan UPVC tahan cuaca, kami hadir sebagai solusi lengkap untuk kebutuhan pintu hunian maupun komersial.
+              Dengan koleksi material dari pintu kayu solid, pintu aluminium modern, pintu UPVC tahan cuaca, hingga pintu kaca tempered, kami hadir sebagai satu mitra yang menyederhanakan pengadaan material pintu untuk proyek hunian maupun bangunan komersial berskala besar.
             </p>
 
             <div style={{ marginTop: "32px", borderTop: "0.5px solid #e8e6e0" }}>
@@ -67,7 +67,7 @@ const About = () => {
           <div>
             <div style={{ background: "#f8f7f4", padding: "28px", border: "0.5px solid #e8e6e0", borderRadius: "16px" }}>
               <p style={{ fontSize: "11px", fontWeight: 500, letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: "20px", color: "#aaa" }}>
-                Jenis Material
+                Jenis Material Kami
               </p>
               <div style={{ display: "flex", flexWrap: "wrap", gap: "8px" }}>
                 {keahlian.map((item) => (
@@ -98,7 +98,7 @@ const About = () => {
               }}
             >
               <div>
-                <p style={{ fontSize: "14px", fontWeight: 500, color: "#fff" }}>Konsultasi gratis sekarang</p>
+                <p style={{ fontSize: "14px", fontWeight: 500, color: "#fff" }}>Butuh bantuan menentukan material?</p>
                 <p style={{ fontSize: "11px", marginTop: "2px", color: "#666" }}>Senin–Sabtu · 08.00–17.00 WIB</p>
               </div>
               <a href="#kontak">

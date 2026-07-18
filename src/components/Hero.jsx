@@ -23,7 +23,7 @@ const Hero = () => {
           {/* Gambar hero — full cover */}
           <img
             src="/assets/beranda/pintu.png"
-            alt="Pintu Material Premium"
+            alt="Material pintu premium EleganceWood Indonesia untuk hunian dan bangunan komersial"
             style={{
               position: "absolute",
               inset: 0,
@@ -93,7 +93,7 @@ const Hero = () => {
               }}
             >
               Material Pintu Premium<br />
-              <span style={{ color: "rgba(255,255,255,0.45)" }}>untuk Hunian &amp; Bangunan Modern</span>
+              <span style={{ color: "rgba(255,255,255,0.45)" }}>untuk Hunian &amp; Proyek Bernilai Tinggi</span>
             </h1>
 
             {/* Description */}
@@ -106,7 +106,7 @@ const Hero = () => {
                 margin: "0 0 32px",
               }}
             >
-              Kami menyediakan berbagai material pintu berkualitas tinggi mulai dari kayu solid, aluminium, UPVC, hingga kaca tempered dengan desain modern, daya tahan tinggi, dan finishing premium untuk kebutuhan residensial maupun komersial.
+              EleganceWood Indonesia adalah distributor dan supplier material pintu premium yang dipercaya kontraktor, arsitek, dan pemilik properti di seluruh Indonesia. Kami menghadirkan pintu kayu solid, pintu aluminium, pintu UPVC, hingga pintu kaca dengan kualitas material terpilih, presisi produksi, dan hasil akhir yang tahan lama untuk kebutuhan pintu rumah maupun pintu kantor.
             </p>
 
             {/* CTA Buttons */}
@@ -128,7 +128,7 @@ const Hero = () => {
                   onMouseEnter={(e) => (e.currentTarget.style.opacity = "0.85")}
                   onMouseLeave={(e) => (e.currentTarget.style.opacity = "1")}
                 >
-                  Minta penawaran →
+                  Konsultasi &amp; minta penawaran →
                 </button>
               </a>
               <a href="#produk">
@@ -149,7 +149,7 @@ const Hero = () => {
                   onMouseEnter={(e) => (e.currentTarget.style.background = "rgba(255,255,255,0.22)")}
                   onMouseLeave={(e) => (e.currentTarget.style.background = "rgba(255,255,255,0.12)")}
                 >
-                  Lihat katalog
+                  Jelajahi katalog produk
                 </button>
               </a>
             </div>
@@ -174,18 +174,18 @@ const Hero = () => {
         {[
           {
             val: "12+",
-            label: "Jenis Material Tersedia",
-            sub: "Kayu, aluminium, UPVC, kaca, dan material premium lainnya.",
+            label: "Kategori Material Pilihan",
+            sub: "Kayu solid, aluminium, UPVC, kaca, hingga baja untuk security door.",
           },
           {
             val: "500+",
-            label: "Model & Finishing",
-            sub: "Panel, flush, sliding, folding, HPL, duco, hingga natural wood.",
+            label: "Varian Model & Finishing",
+            sub: "Panel, flush, sliding, folding, HPL, duco, dan natural wood.",
           },
           {
             val: "15thn",
-            label: "Pengalaman & Garansi",
-            sub: "Produk berkualitas dengan material tahan lama dan layanan profesional.",
+            label: "Pengalaman Melayani Klien",
+            sub: "Ditopang standar mutu terjaga dan dukungan purnajual yang responsif.",
           },
         ].map(({ val, label, sub }, i) => (
           <div

@@ -1,35 +1,35 @@
 const portfolioItems = [
   {
     title: "Pintu Panel Kayu Solid",
-    desc: "Pintu kayu jati dan merbau premium dengan panel ukir dan finishing HPL. Cocok untuk hunian mewah dan bangunan komersial.",
+    desc: "Pintu kayu jati dan merbau premium dengan panel ukir dan finishing HPL. Struktur kayu yang padat membuatnya tahan lama dan tidak mudah melengkung, cocok untuk pintu utama hunian mewah maupun lobi bangunan komersial.",
     tags: ["Jati", "Merbau", "HPL Finishing"],
     badge: "Best Seller",
   },
   {
     title: "Pintu Aluminium Sliding",
-    desc: "Sistem geser aluminium powder-coat ringan dan anti karat. Ideal untuk ruang terbatas dan fasad eksterior modern.",
+    desc: "Sistem geser aluminium dengan lapisan powder-coat yang ringan dan bebas karat, sehingga hemat tenaga saat dibuka-tutup dan minim perawatan jangka panjang. Ideal untuk ruang terbatas dan fasad eksterior modern.",
     tags: ["Aluminium", "Sliding", "Eksterior"],
   },
   {
     title: "Pintu UPVC Weatherproof",
-    desc: "Material UPVC tahan cuaca dan kelembaban tinggi. Pilihan tepat untuk area tropis dengan perawatan minimal.",
+    desc: "Material UPVC tahan terhadap cuaca panas dan kelembaban tinggi tanpa memuai atau lapuk, menjadikannya pilihan hemat biaya perawatan untuk iklim tropis Indonesia sekaligus tahan terhadap serangan rayap.",
     tags: ["UPVC", "Weatherproof", "Anti Rayap"],
   },
   {
     title: "Pintu Kaca Frameless",
-    desc: "Panel kaca tempered 10–12mm clear atau frosted. Tampilan modern dan elegan untuk lobby, kantor, dan showroom.",
+    desc: "Panel kaca tempered setebal 10–12mm dalam varian clear atau frosted, memberikan kesan luas dan pencahayaan alami yang maksimal. Pilihan tepat untuk lobi, ruang kantor, dan area showroom bergaya modern.",
     tags: ["Kaca Tempered", "Frameless", "Interior"],
     badge: "Premium",
     featured: true,
   },
   {
     title: "Security Door Baja",
-    desc: "Pintu baja anti-bobol dengan locking system multipoint. Standar keamanan untuk perumahan dan fasilitas komersial.",
+    desc: "Pintu baja dengan sistem penguncian multipoint yang menyulitkan upaya pembobolan, memberikan lapisan keamanan ekstra untuk perumahan maupun fasilitas komersial dengan risiko keamanan tinggi.",
     tags: ["Baja", "Anti-Bobol", "Security"],
   },
   {
     title: "Pintu Lipat HDF / MDF",
-    desc: "Sistem folding ringan berbahan HDF atau MDF dengan finishing duco. Solusi fleksibel untuk partisi dan ruang multifungsi.",
+    desc: "Sistem folding berbahan HDF atau MDF dengan finishing duco yang ringan dan hemat ruang, sehingga fleksibel digunakan sebagai partisi maupun pembatas pada ruang multifungsi.",
     tags: ["HDF", "MDF", "Folding"],
   },
 ];
@@ -51,10 +51,10 @@ const Portofolio = () => {
             Katalog Produk
           </p>
           <h2 style={{ fontSize: "clamp(24px, 3vw, 36px)", fontWeight: 500, color: "#0b0b0b", letterSpacing: "-1px", margin: 0, lineHeight: 1.1 }}>
-            Pilihan material<br /><span style={{ color: "#aaa" }}>untuk setiap kebutuhan.</span>
+            Material pintu premium<br /><span style={{ color: "#aaa" }}>untuk setiap kebutuhan bangunan.</span>
           </h2>
           <p style={{ fontSize: "14px", color: "#888", marginTop: "16px", maxWidth: "440px", lineHeight: 1.7 }}>
-            Dari kayu solid hingga kaca tempered — semua tersedia dalam berbagai ukuran, finishing, dan spesifikasi teknis.
+            Dari pintu kayu solid hingga pintu kaca tempered — tersedia dalam berbagai ukuran, finishing, dan spesifikasi teknis sesuai kebutuhan proyek Anda.
           </p>
         </div>
 

@@ -33,9 +33,9 @@ const Navbar = () => {
       <div style={{ display: "flex", gap: "28px" }}>
         {[
           { label: "Beranda", href: "#home" },
-          { label: "Jenis", href: "#jenis" },
-          { label: "Katalog", href: "#portofolio" },
-          { label: "Tentang", href: "#tentang" },
+          { label: "Jenis Pintu", href: "#jenis" },
+          { label: "Katalog Produk", href: "#portofolio" },
+          { label: "Tentang Kami", href: "#tentang" },
           { label: "Kontak", href: "#kontak" },
         ].map((item) => (
           <a
@@ -61,7 +61,7 @@ const Navbar = () => {
           onMouseEnter={(e) => (e.currentTarget.style.opacity = "0.75")}
           onMouseLeave={(e) => (e.currentTarget.style.opacity = "1")}
         >
-          Minta penawaran
+          Minta Penawaran
         </button>
       </a>
     </nav>

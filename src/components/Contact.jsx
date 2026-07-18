@@ -44,10 +44,10 @@ const Contact = () => {
   };
 
   const channels = [
-    { label: "WhatsApp", sub: "Chat langsung dengan tim kami", href: "https://wa.me/6287845333239" },
-    { label: "Email", sub: "Kirim pertanyaan via email", href: "mailto:info@pintumaterial.id" },
-    { label: "Instagram", sub: "Lihat koleksi & inspirasi", href: "https://instagram.com/pintumaterial" },
-    { label: "Showroom", sub: "Kunjungi kami langsung", href: "#" },
+    { label: "WhatsApp", sub: "Konsultasi cepat dengan tim penjualan kami", href: "https://wa.me/6287845333239" },
+    { label: "Email", sub: "Kirim pertanyaan atau dokumen proyek Anda", href: "mailto:info@pintumaterial.id" },
+    { label: "Instagram", sub: "Lihat portofolio dan inspirasi desain pintu", href: "https://instagram.com/pintumaterial" },
+    { label: "Showroom", sub: "Lihat dan rasakan langsung material kami", href: "#" },
   ];
 
   return (
@@ -66,11 +66,11 @@ const Contact = () => {
         </div>
 
         <h2 style={{ fontSize: "clamp(24px, 3vw, 36px)", fontWeight: 500, color: "#0b0b0b", letterSpacing: "-1px", margin: 0, lineHeight: 1.1 }}>
-          Hubungi kami,<br /><span style={{ color: "#aaa" }}>kami siap membantu.</span>
+          Hubungi kami,<br /><span style={{ color: "#aaa" }}>mari diskusikan proyek Anda.</span>
         </h2>
 
         <p style={{ marginTop: "16px", fontSize: "14px", color: "#888", maxWidth: "400px", lineHeight: 1.7 }}>
-          Konsultasikan kebutuhan pintu Anda — material, ukuran, finishing, dan anggaran. Tim kami siap memberikan penawaran terbaik.
+          Sampaikan kebutuhan pintu Anda — jenis material, ukuran, finishing, hingga estimasi anggaran. Tim kami akan menyusun penawaran yang sesuai dengan kebutuhan proyek Anda.
         </p>
 
         <div style={{ borderTop: "0.5px solid #e8e6e0", marginTop: "40px" }} />
@@ -112,10 +112,10 @@ const Contact = () => {
             Formulir Penawaran
           </p>
           <h3 style={{ fontSize: "18px", fontWeight: 500, color: "#0b0b0b", letterSpacing: "-0.5px", margin: "0 0 6px" }}>
-            Minta penawaran gratis
+            Ajukan penawaran gratis
           </h3>
           <p style={{ fontSize: "13px", color: "#aaa", marginBottom: "32px" }}>
-            Isi form di bawah ini dan tim kami akan menghubungi Anda dalam 1×24 jam.
+            Lengkapi formulir di bawah ini dan tim kami akan menghubungi Anda dalam waktu 1×24 jam kerja.
           </p>
 
           {submitted ? (
@@ -129,9 +129,9 @@ const Contact = () => {
               }}
             >
               <p style={{ fontSize: "28px", marginBottom: "12px" }}>✓</p>
-              <p style={{ fontSize: "16px", fontWeight: 500, color: "#0b0b0b" }}>Pesan terkirim!</p>
+              <p style={{ fontSize: "16px", fontWeight: 500, color: "#0b0b0b" }}>Permintaan penawaran terkirim!</p>
               <p style={{ fontSize: "13px", color: "#888", marginTop: "6px" }}>
-                Terima kasih, {form.firstName}. Kami akan segera menghubungi Anda.
+                Terima kasih, {form.firstName}. Tim kami akan segera menghubungi Anda untuk membahas kebutuhan proyek.
               </p>
             </div>
           ) : (
@@ -202,7 +202,7 @@ const Contact = () => {
                   value={form.message}
                   onChange={handleChange}
                   rows={5}
-                  placeholder="Ceritakan kebutuhan pintu Anda — jenis, ukuran, finishing, dan jumlah unit..."
+                  placeholder="Ceritakan kebutuhan pintu Anda — jenis material, ukuran, finishing, dan perkiraan jumlah unit..."
                   style={{ ...inputStyle, resize: "vertical", lineHeight: 1.7 }}
                   onFocus={(e) => (e.target.style.borderColor = "#0b0b0b")}
                   onBlur={(e) => (e.target.style.borderColor = "#e8e6e0")}
@@ -223,7 +223,7 @@ const Contact = () => {
                   onMouseEnter={(e) => (e.currentTarget.style.opacity = "0.75")}
                   onMouseLeave={(e) => (e.currentTarget.style.opacity = "1")}
                 >
-                  Kirim pesan →
+                  Kirim permintaan penawaran →
                 </button>
               </div>
             </div>
@@ -242,10 +242,10 @@ const Contact = () => {
           }}
         >
           <div style={{ fontSize: "15px", fontWeight: 500, color: "#0b0b0b", letterSpacing: "-0.3px" }}>
-            pintu<span style={{ color: "#888" }}>.material</span>
+            EleganceWood<span style={{ color: "#888" }}>.Indonesia</span>
           </div>
           <p style={{ fontSize: "12px", color: "#bbb" }}>
-            © 2025 pintu.material · Semua hak dilindungi
+            © 2025 EleganceWood Indonesia · Seluruh hak cipta dilindungi undang-undang
           </p>
         </div>
 
