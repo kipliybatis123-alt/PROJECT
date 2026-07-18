@@ -1,91 +1,156 @@
+import { useState } from "react";
+
+const c = {
+  bg: "#F1F2EE",
+  surface: "#FFFFFF",
+  border: "#E5E7EB",
+  heading: "#1F2933",
+  body: "#4B5563",
+  muted: "#6B7280",
+  faint: "#9CA3AF",
+  primary: "#2F5D50",
+  primaryDark: "#264A40",
+  accent: "#C8A97E",
+  tint: "rgba(47, 93, 80, 0.08)",
+  fontHeading: "'Manrope', 'Plus Jakarta Sans', sans-serif",
+  fontBody: "'Inter', 'Plus Jakarta Sans', sans-serif",
+};
+
 const portfolioItems = [
   {
-    title: "Pintu Panel Kayu Solid",
-    desc: "Pintu kayu jati dan merbau premium dengan panel ukir dan finishing HPL. Struktur kayu yang padat membuatnya tahan lama dan tidak mudah melengkung, cocok untuk pintu utama hunian mewah maupun lobi bangunan komersial.",
-    tags: ["Jati", "Merbau", "HPL Finishing"],
+    title: "Pintu Kayu Jati",
+    desc: "Pintu kayu jati solid dengan serat rapat dan struktur stabil, sehingga tidak mudah melengkung meski digunakan bertahun-tahun. Tampilan natural yang hangat cocok untuk pintu utama hunian maupun proyek bernilai tinggi.",
+    tags: ["Jati", "Kayu Solid"],
     badge: "Best Seller",
-  },
-  {
-    title: "Pintu Aluminium Sliding",
-    desc: "Sistem geser aluminium dengan lapisan powder-coat yang ringan dan bebas karat, sehingga hemat tenaga saat dibuka-tutup dan minim perawatan jangka panjang. Ideal untuk ruang terbatas dan fasad eksterior modern.",
-    tags: ["Aluminium", "Sliding", "Eksterior"],
-  },
-  {
-    title: "Pintu UPVC Weatherproof",
-    desc: "Material UPVC tahan terhadap cuaca panas dan kelembaban tinggi tanpa memuai atau lapuk, menjadikannya pilihan hemat biaya perawatan untuk iklim tropis Indonesia sekaligus tahan terhadap serangan rayap.",
-    tags: ["UPVC", "Weatherproof", "Anti Rayap"],
-  },
-  {
-    title: "Pintu Kaca Frameless",
-    desc: "Panel kaca tempered setebal 10–12mm dalam varian clear atau frosted, memberikan kesan luas dan pencahayaan alami yang maksimal. Pilihan tepat untuk lobi, ruang kantor, dan area showroom bergaya modern.",
-    tags: ["Kaca Tempered", "Frameless", "Interior"],
-    badge: "Premium",
+    images: ["/assets/produk/kayujati.jpeg", "/assets/produk/kayujati2.jpeg"],
     featured: true,
   },
   {
-    title: "Security Door Baja",
-    desc: "Pintu baja dengan sistem penguncian multipoint yang menyulitkan upaya pembobolan, memberikan lapisan keamanan ekstra untuk perumahan maupun fasilitas komersial dengan risiko keamanan tinggi.",
-    tags: ["Baja", "Anti-Bobol", "Security"],
+    title: "Pintu Minimalis Putih",
+    desc: "Desain minimalis dengan finishing putih bersih yang serasi untuk hunian modern. Tampilan clean dan netral, mudah dipadukan dengan berbagai gaya interior maupun eksterior.",
+    tags: ["Minimalis", "Finishing Putih"],
+    images: ["/assets/produk/minimalisputih.jpeg"],
   },
   {
-    title: "Pintu Lipat HDF / MDF",
-    desc: "Sistem folding berbahan HDF atau MDF dengan finishing duco yang ringan dan hemat ruang, sehingga fleksibel digunakan sebagai partisi maupun pembatas pada ruang multifungsi.",
-    tags: ["HDF", "MDF", "Folding"],
+    title: "Pintu Minimalis Merah Mahoni",
+    desc: "Finishing kayu mahoni bernuansa merah kecoklatan yang elegan, menghadirkan kesan hangat dan mewah pada ruangan. Desain minimalis membuatnya serasi untuk berbagai konsep hunian.",
+    tags: ["Mahoni", "Minimalis"],
+    images: ["/assets/produk/mahonimerah.jpeg", "/assets/produk/mahonimerah2.jpeg"],
   },
 ];
+
+const cardBase = {
+  background: c.surface,
+  borderRadius: "16px",
+  border: `0.5px solid ${c.border}`,
+  boxShadow: "0 4px 20px rgba(31,41,51,0.05)",
+  transition: "box-shadow 300ms ease, transform 300ms ease",
+};
 
 const Portofolio = () => {
   const featured = portfolioItems.find((item) => item.featured);
   const rest = portfolioItems.filter((item) => !item.featured);
 
+  const [activeImg, setActiveImg] = useState({});
+
+  const currentImage = (item) => item.images[activeImg[item.title] || 0];
+  const switchImage = (item) => {
+    if (item.images.length < 2) return;
+    setActiveImg((prev) => ({
+      ...prev,
+      [item.title]: ((prev[item.title] || 0) + 1) % item.images.length,
+    }));
+  };
+
+  const switchBtnStyle = {
+    position: "absolute",
+    bottom: "12px",
+    right: "12px",
+    display: "flex",
+    alignItems: "center",
+    gap: "5px",
+    background: "rgba(31,41,51,0.55)",
+    backdropFilter: "blur(4px)",
+    color: "#fff",
+    border: "none",
+    borderRadius: "20px",
+    padding: "6px 12px",
+    fontSize: "11px",
+    fontFamily: c.fontBody,
+    fontWeight: 600,
+    cursor: "pointer",
+    transition: "background 200ms ease",
+  };
+
+  const hoverIn = (e) => {
+    e.currentTarget.style.boxShadow = "0 10px 32px rgba(47,93,80,0.14)";
+    e.currentTarget.style.transform = "translateY(-2px)";
+  };
+  const hoverOut = (e) => {
+    e.currentTarget.style.boxShadow = cardBase.boxShadow;
+    e.currentTarget.style.transform = "translateY(0)";
+  };
+
   return (
     <section
       id="portofolio"
-      style={{ background: "#f8f7f4", paddingTop: "64px", paddingBottom: "64px", fontFamily: "sans-serif" }}
+      style={{ background: c.bg, paddingTop: "64px", paddingBottom: "64px", fontFamily: c.fontBody }}
     >
       <div style={{ maxWidth: "1280px", margin: "0 auto", padding: "0 32px" }}>
 
         {/* Header */}
         <div style={{ marginBottom: "40px" }}>
-          <p style={{ fontSize: "11px", fontWeight: 500, letterSpacing: "0.1em", color: "#888", textTransform: "uppercase", marginBottom: "12px" }}>
+          <p style={{ fontSize: "11px", fontWeight: 600, letterSpacing: "0.1em", color: c.primary, textTransform: "uppercase", marginBottom: "12px" }}>
             Katalog Produk
           </p>
-          <h2 style={{ fontSize: "clamp(24px, 3vw, 36px)", fontWeight: 500, color: "#0b0b0b", letterSpacing: "-1px", margin: 0, lineHeight: 1.1 }}>
-            Material pintu premium<br /><span style={{ color: "#aaa" }}>untuk setiap kebutuhan bangunan.</span>
+          <h2 style={{ fontFamily: c.fontHeading, fontSize: "clamp(24px, 3vw, 36px)", fontWeight: 700, color: c.heading, letterSpacing: "-1px", margin: 0, lineHeight: 1.1 }}>
+            Material pintu premium<br /><span style={{ color: c.muted }}>untuk setiap kebutuhan bangunan.</span>
           </h2>
-          <p style={{ fontSize: "14px", color: "#888", marginTop: "16px", maxWidth: "440px", lineHeight: 1.7 }}>
+          <p style={{ fontSize: "14px", color: c.body, marginTop: "16px", maxWidth: "440px", lineHeight: 1.7 }}>
             Dari pintu kayu solid hingga pintu kaca tempered — tersedia dalam berbagai ukuran, finishing, dan spesifikasi teknis sesuai kebutuhan proyek Anda.
           </p>
         </div>
 
-        <div style={{ borderTop: "0.5px solid #e8e6e0", marginBottom: "32px" }} />
+        <div style={{ borderTop: `0.5px solid ${c.border}`, marginBottom: "32px" }} />
 
         {/* Featured Card */}
         {featured && (
           <div
             style={{
-              background: "#fff", borderRadius: "16px", border: "0.5px solid #e8e6e0",
+              ...cardBase,
               display: "grid", gridTemplateColumns: "1fr 1fr",
               overflow: "hidden", marginBottom: "12px",
             }}
+            onMouseEnter={hoverIn}
+            onMouseLeave={hoverOut}
           >
-            <div style={{ background: "#f0ede8", minHeight: "200px", overflow: "hidden" }}>
+            <div className="relative" style={{ background: c.tint, aspectRatio: "1 / 1" }}>
               <img
-                src="/assets/katalog/pintu-kaca-frameless.png"
-                alt="Pintu kaca tempered frameless EleganceWood Indonesia untuk lobi dan ruang kantor modern"
-                style={{ width: "100%", height: "100%", minHeight: "200px", objectFit: "cover", display: "block" }}
+                src={currentImage(featured)}
+                alt={featured.title}
+                style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }}
               />
+              {featured.images.length > 1 && (
+                <button
+                  onClick={() => switchImage(featured)}
+                  style={switchBtnStyle}
+                  onMouseEnter={(e) => (e.currentTarget.style.background = "rgba(31,41,51,0.75)")}
+                  onMouseLeave={(e) => (e.currentTarget.style.background = "rgba(31,41,51,0.55)")}
+                >
+                  ⟳ Ganti Foto
+                </button>
+              )}
             </div>
             <div style={{ padding: "32px" }}>
-              <p style={{ fontSize: "11px", fontWeight: 500, color: "#aaa", letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: "10px" }}>Unggulan</p>
-              <p style={{ fontSize: "20px", fontWeight: 500, color: "#0b0b0b", lineHeight: 1.2 }}>{featured.title}</p>
-              <p style={{ fontSize: "13px", color: "#888", lineHeight: 1.7, marginTop: "12px" }}>{featured.desc}</p>
+              <p style={{ fontSize: "11px", fontWeight: 600, color: c.muted, letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: "10px" }}>Unggulan</p>
+              <p style={{ fontFamily: c.fontHeading, fontSize: "20px", fontWeight: 700, color: c.heading, lineHeight: 1.2 }}>{featured.title}</p>
+              <p style={{ fontSize: "13px", color: c.body, lineHeight: 1.7, marginTop: "12px" }}>{featured.desc}</p>
               <div style={{ display: "flex", flexWrap: "wrap", gap: "6px", marginTop: "20px" }}>
                 {featured.tags.map((t) => (
-                  <span key={t} style={{ background: "#f0ede8", color: "#666", borderRadius: "8px", padding: "5px 12px", fontSize: "12px" }}>{t}</span>
+                  <span key={t} style={{ background: c.tint, color: c.primaryDark, borderRadius: "8px", padding: "5px 12px", fontSize: "12px", fontWeight: 500 }}>{t}</span>
                 ))}
                 {featured.badge && (
-                  <span style={{ background: "#0b0b0b", color: "#fff", borderRadius: "8px", padding: "5px 12px", fontSize: "12px" }}>{featured.badge}</span>
+                  <span style={{ background: c.accent, color: c.primaryDark, borderRadius: "8px", padding: "5px 12px", fontSize: "12px", fontWeight: 600 }}>{featured.badge}</span>
                 )}
               </div>
             </div>
@@ -97,20 +162,44 @@ const Portofolio = () => {
           {rest.map((item, i) => (
             <div
               key={i}
-              style={{ background: "#fff", borderRadius: "16px", border: "0.5px solid #e8e6e0", padding: "24px" }}
+              style={{ ...cardBase, overflow: "hidden", position: "relative" }}
+              onMouseEnter={hoverIn}
+              onMouseLeave={hoverOut}
             >
-              <p style={{ fontSize: "11px", fontWeight: 500, color: "#aaa", letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: "10px" }}>
-                {item.tags[0]}
-              </p>
-              <p style={{ fontSize: "15px", fontWeight: 500, color: "#0b0b0b", lineHeight: 1.3 }}>{item.title}</p>
-              <p style={{ fontSize: "13px", color: "#888", lineHeight: 1.6, marginTop: "8px" }}>{item.desc}</p>
-              <div style={{ display: "flex", flexWrap: "wrap", gap: "6px", marginTop: "16px" }}>
-                {item.tags.map((t) => (
-                  <span key={t} style={{ background: "#f0ede8", color: "#666", borderRadius: "8px", padding: "5px 12px", fontSize: "12px" }}>{t}</span>
-                ))}
-                {item.badge && (
-                  <span style={{ background: "#0b0b0b", color: "#fff", borderRadius: "8px", padding: "5px 12px", fontSize: "12px" }}>{item.badge}</span>
+              <div className="relative" style={{ background: c.tint, aspectRatio: "1 / 1" }}>
+                <img
+                  src={currentImage(item)}
+                  alt={item.title}
+                  style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }}
+                />
+                <span style={{ position: "absolute", top: "12px", right: "12px", fontFamily: c.fontHeading, fontSize: "11px", fontWeight: 700, color: "#fff", background: "rgba(31,41,51,0.45)", borderRadius: "8px", padding: "2px 8px" }}>
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                {item.images.length > 1 && (
+                  <button
+                    onClick={() => switchImage(item)}
+                    style={switchBtnStyle}
+                    onMouseEnter={(e) => (e.currentTarget.style.background = "rgba(31,41,51,0.75)")}
+                    onMouseLeave={(e) => (e.currentTarget.style.background = "rgba(31,41,51,0.55)")}
+                  >
+                    ⟳ Ganti Foto
+                  </button>
                 )}
+              </div>
+              <div style={{ padding: "24px" }}>
+                <p style={{ fontSize: "11px", fontWeight: 600, color: c.muted, letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: "10px" }}>
+                  {item.tags[0]}
+                </p>
+                <p style={{ fontFamily: c.fontHeading, fontSize: "15px", fontWeight: 700, color: c.heading, lineHeight: 1.3 }}>{item.title}</p>
+                <p style={{ fontSize: "13px", color: c.body, lineHeight: 1.6, marginTop: "8px" }}>{item.desc}</p>
+                <div style={{ display: "flex", flexWrap: "wrap", gap: "6px", marginTop: "16px" }}>
+                  {item.tags.map((t) => (
+                    <span key={t} style={{ background: c.tint, color: c.primaryDark, borderRadius: "8px", padding: "5px 12px", fontSize: "12px", fontWeight: 500 }}>{t}</span>
+                  ))}
+                  {item.badge && (
+                    <span style={{ background: c.accent, color: c.primaryDark, borderRadius: "8px", padding: "5px 12px", fontSize: "12px", fontWeight: 600 }}>{item.badge}</span>
+                  )}
+                </div>
               </div>
             </div>
           ))}

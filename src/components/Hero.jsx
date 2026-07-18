@@ -1,10 +1,24 @@
-import { useState } from "react";
+const c = {
+  bg: "#F8F8F6",
+  bgAlt: "#F1F2EE",
+  surface: "#FFFFFF",
+  border: "#E5E7EB",
+  heading: "#1F2933",
+  body: "#4B5563",
+  muted: "#6B7280",
+  faint: "#9CA3AF",
+  primary: "#2F5D50",
+  primaryDark: "#264A40",
+  accent: "#C8A97E",
+  fontHeading: "'Manrope', 'Plus Jakarta Sans', sans-serif",
+  fontBody: "'Inter', 'Plus Jakarta Sans', sans-serif",
+};
 
 const Hero = () => {
   return (
     <section
       id="home"
-      style={{ fontFamily: "sans-serif", background: "#f2f0eb", paddingTop: "60px" }}
+      style={{ fontFamily: c.fontBody, background: c.bg, paddingTop: "60px" }}
     >
       {/* ═══════════════════════════════════════════
           HERO UTAMA — full-width image + teks overlay
@@ -13,11 +27,12 @@ const Hero = () => {
         <div
           style={{
             position: "relative",
-            borderRadius: "28px",
+            borderRadius: "24px",
             overflow: "hidden",
-            minHeight: "580px",
+            minHeight: "600px",
             display: "flex",
             alignItems: "flex-end",
+            boxShadow: "0 8px 32px rgba(31,41,51,0.10)",
           }}
         >
           {/* Gambar hero — full cover */}
@@ -35,13 +50,13 @@ const Hero = () => {
             }}
           />
 
-          {/* Overlay gradasi kiri → kanan, bawah → atas */}
+          {/* Overlay gradasi — nuansa kayu gelap yang hangat, bukan hitam pekat */}
           <div
             style={{
               position: "absolute",
               inset: 0,
               background:
-                "linear-gradient(105deg, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.38) 55%, rgba(0,0,0,0.08) 100%)",
+                "linear-gradient(105deg, rgba(20,28,26,0.72) 0%, rgba(20,28,26,0.36) 55%, rgba(20,28,26,0.06) 100%)",
               pointerEvents: "none",
             }}
           />
@@ -50,7 +65,7 @@ const Hero = () => {
               position: "absolute",
               inset: 0,
               background:
-                "linear-gradient(to top, rgba(0,0,0,0.55) 0%, transparent 50%)",
+                "linear-gradient(to top, rgba(20,28,26,0.5) 0%, transparent 50%)",
               pointerEvents: "none",
             }}
           />
@@ -60,7 +75,7 @@ const Hero = () => {
             style={{
               position: "relative",
               zIndex: 2,
-              padding: "48px",
+              padding: "48px 48px 96px",
               maxWidth: "660px",
             }}
           >
@@ -75,8 +90,8 @@ const Hero = () => {
                 marginBottom: "24px",
               }}
             >
-              <span style={{ width: "6px", height: "6px", borderRadius: "50%", background: "#fff", display: "inline-block" }} />
-              <span style={{ fontSize: "11px", fontWeight: 500, color: "#fff", letterSpacing: "0.08em", textTransform: "uppercase" }}>
+              <span style={{ width: "6px", height: "6px", borderRadius: "50%", background: c.accent, display: "inline-block" }} />
+              <span style={{ fontSize: "11px", fontWeight: 600, color: "#fff", letterSpacing: "0.08em", textTransform: "uppercase" }}>
                 Beranda
               </span>
             </div>
@@ -84,8 +99,9 @@ const Hero = () => {
             {/* Headline */}
             <h1
               style={{
+                fontFamily: c.fontHeading,
                 fontSize: "clamp(32px, 4.5vw, 62px)",
-                fontWeight: 500,
+                fontWeight: 700,
                 lineHeight: 1.06,
                 letterSpacing: "-2px",
                 color: "#fff",
@@ -93,14 +109,14 @@ const Hero = () => {
               }}
             >
               Material Pintu Premium<br />
-              <span style={{ color: "rgba(255,255,255,0.45)" }}>untuk Hunian &amp; Proyek Bernilai Tinggi</span>
+              <span style={{ color: c.accent }}>untuk Hunian &amp; Proyek Bernilai Tinggi</span>
             </h1>
 
             {/* Description */}
             <p
               style={{
                 fontSize: "15px",
-                color: "rgba(255,255,255,0.7)",
+                color: "rgba(255,255,255,0.75)",
                 lineHeight: 1.7,
                 maxWidth: "480px",
                 margin: "0 0 32px",
@@ -115,18 +131,19 @@ const Hero = () => {
                 <button
                   style={{
                     background: "#fff",
-                    color: "#0b0b0b",
+                    color: c.primaryDark,
                     border: "none",
                     borderRadius: "24px",
                     padding: "13px 28px",
                     fontSize: "13px",
+                    fontFamily: c.fontBody,
                     fontWeight: 600,
                     cursor: "pointer",
-                    transition: "opacity 0.2s",
+                    transition: "opacity 300ms ease, transform 300ms ease",
                     letterSpacing: "-0.1px",
                   }}
-                  onMouseEnter={(e) => (e.currentTarget.style.opacity = "0.85")}
-                  onMouseLeave={(e) => (e.currentTarget.style.opacity = "1")}
+                  onMouseEnter={(e) => { e.currentTarget.style.opacity = "0.88"; e.currentTarget.style.transform = "translateY(-1px)"; }}
+                  onMouseLeave={(e) => { e.currentTarget.style.opacity = "1"; e.currentTarget.style.transform = "translateY(0)"; }}
                 >
                   Konsultasi &amp; minta penawaran →
                 </button>
@@ -141,9 +158,10 @@ const Hero = () => {
                     borderRadius: "24px",
                     padding: "13px 28px",
                     fontSize: "13px",
+                    fontFamily: c.fontBody,
                     fontWeight: 500,
                     cursor: "pointer",
-                    transition: "background 0.2s",
+                    transition: "background 300ms ease",
                     letterSpacing: "-0.1px",
                   }}
                   onMouseEnter={(e) => (e.currentTarget.style.background = "rgba(255,255,255,0.22)")}
@@ -158,49 +176,53 @@ const Hero = () => {
       </div>
 
       {/* ═══════════════════════════════════════════
-          STATS ROW — 3 angka kunci
+          STATS ROW — kartu mengambang, overlap ke gambar hero
       ═══════════════════════════════════════════ */}
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "1fr 1fr 1fr",
-          margin: "16px 32px 32px",
-          background: "#fff",
-          borderRadius: "20px",
-          border: "0.5px solid #e8e6e0",
-          overflow: "hidden",
-        }}
-      >
-        {[
-          {
-            val: "12+",
-            label: "Kategori Material Pilihan",
-            sub: "Kayu solid, aluminium, UPVC, kaca, hingga baja untuk security door.",
-          },
-          {
-            val: "500+",
-            label: "Varian Model & Finishing",
-            sub: "Panel, flush, sliding, folding, HPL, duco, dan natural wood.",
-          },
-          {
-            val: "15thn",
-            label: "Pengalaman Melayani Klien",
-            sub: "Ditopang standar mutu terjaga dan dukungan purnajual yang responsif.",
-          },
-        ].map(({ val, label, sub }, i) => (
-          <div
-            key={val}
-            style={{
-              padding: "28px 32px",
-              borderRight: i < 2 ? "0.5px solid #e8e6e0" : "none",
-            }}
-          >
-            <div style={{ fontSize: "32px", fontWeight: 500, color: "#0b0b0b", letterSpacing: "-1.5px", lineHeight: 1 }}>{val}</div>
-            <div style={{ fontSize: "13px", color: "#555", marginTop: "8px", fontWeight: 500 }}>{label}</div>
-            <div style={{ fontSize: "11px", color: "#bbb", marginTop: "3px" }}>{sub}</div>
-          </div>
-        ))}
+      <div style={{ padding: "0 32px", marginTop: "-56px", position: "relative", zIndex: 3 }}>
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "1fr 1fr 1fr",
+            background: c.surface,
+            borderRadius: "20px",
+            border: `0.5px solid ${c.border}`,
+            overflow: "hidden",
+            boxShadow: "0 16px 40px rgba(31,41,51,0.12)",
+          }}
+        >
+          {[
+            {
+              val: "12+",
+              label: "Kategori Material Pilihan",
+              sub: "Kayu solid, aluminium, UPVC, kaca, hingga baja untuk security door.",
+            },
+            {
+              val: "500+",
+              label: "Varian Model & Finishing",
+              sub: "Panel, flush, sliding, folding, HPL, duco, dan natural wood.",
+            },
+            {
+              val: "15thn",
+              label: "Pengalaman Melayani Klien",
+              sub: "Ditopang standar mutu terjaga dan dukungan purnajual yang responsif.",
+            },
+          ].map(({ val, label, sub }, i) => (
+            <div
+              key={val}
+              style={{
+                padding: "28px 32px",
+                borderRight: i < 2 ? `0.5px solid ${c.border}` : "none",
+                borderTop: `3px solid ${i === 1 ? c.accent : "transparent"}`,
+              }}
+            >
+              <div style={{ fontFamily: c.fontHeading, fontSize: "32px", fontWeight: 700, color: c.primary, letterSpacing: "-1.5px", lineHeight: 1 }}>{val}</div>
+              <div style={{ fontSize: "13px", color: c.heading, marginTop: "8px", fontWeight: 500 }}>{label}</div>
+              <div style={{ fontSize: "11px", color: c.faint, marginTop: "3px" }}>{sub}</div>
+            </div>
+          ))}
+        </div>
       </div>
+      <div style={{ height: "56px" }} />
     </section>
   );
 };
