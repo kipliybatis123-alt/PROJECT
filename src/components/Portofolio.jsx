@@ -69,16 +69,12 @@ const Portofolio = () => {
               overflow: "hidden", marginBottom: "12px",
             }}
           >
-            <div style={{ background: "#f0ede8", display: "flex", alignItems: "center", justifyContent: "center", minHeight: "200px" }}>
-              <svg width="120" height="90" viewBox="0 0 120 90" fill="none">
-                <rect x="10" y="8" width="44" height="74" rx="3" stroke="#0b0b0b" strokeWidth="1.5" fill="none" opacity="0.3" />
-                <rect x="66" y="8" width="44" height="74" rx="3" stroke="#0b0b0b" strokeWidth="1.5" fill="none" opacity="0.3" />
-                <rect x="14" y="12" width="36" height="66" rx="2" fill="#e8e5df" opacity="0.6" />
-                <rect x="70" y="12" width="36" height="66" rx="2" fill="#e8e5df" opacity="0.6" />
-                <line x1="54" y1="8" x2="54" y2="82" stroke="#0b0b0b" strokeWidth="0.8" opacity="0.4" />
-                <circle cx="56" cy="45" r="3" fill="#0b0b0b" opacity="0.3" />
-                <circle cx="64" cy="45" r="3" fill="#0b0b0b" opacity="0.3" />
-              </svg>
+            <div style={{ background: "#f0ede8", minHeight: "200px", overflow: "hidden" }}>
+              <img
+                src="/assets/katalog/pintu-kaca-frameless.png"
+                alt="Pintu kaca tempered frameless EleganceWood Indonesia untuk lobi dan ruang kantor modern"
+                style={{ width: "100%", height: "100%", minHeight: "200px", objectFit: "cover", display: "block" }}
+              />
             </div>
             <div style={{ padding: "32px" }}>
               <p style={{ fontSize: "11px", fontWeight: 500, color: "#aaa", letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: "10px" }}>Unggulan</p>

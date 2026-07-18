@@ -70,16 +70,12 @@ const DashboardMockup = () => {
 
         {/* Card Utama */}
         <div style={{ background: "#fff", borderRadius: "16px", border: "0.5px solid #e8e6e0", overflow: "hidden" }}>
-          <div style={{ height: "120px", background: "#f0ede8", display: "flex", alignItems: "center", justifyContent: "center" }}>
-            <svg width="100" height="72" viewBox="0 0 100 72" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="8" y="6" width="36" height="60" rx="3" stroke="#0b0b0b" strokeWidth="1.5" fill="none" />
-              <rect x="14" y="12" width="24" height="20" rx="2" stroke="#0b0b0b" strokeWidth="1" fill="none" opacity="0.4" />
-              <rect x="14" y="36" width="24" height="20" rx="2" stroke="#0b0b0b" strokeWidth="1" fill="none" opacity="0.4" />
-              <circle cx="42" cy="36" r="2" fill="#0b0b0b" opacity="0.5" />
-              <rect x="56" y="6" width="36" height="60" rx="3" stroke="#0b0b0b" strokeWidth="1.5" fill="none" strokeDasharray="5 3" />
-              <rect x="62" y="12" width="24" height="48" rx="2" stroke="#0b0b0b" strokeWidth="1" fill="none" opacity="0.3" />
-              <line x1="74" y1="6" x2="74" y2="66" stroke="#0b0b0b" strokeWidth="0.8" opacity="0.3" />
-            </svg>
+          <div style={{ height: "120px", background: "#f0ede8", overflow: "hidden" }}>
+            <img
+              src="/assets/katalog/pintu-kayu-solid.png"
+              alt="Pintu kayu solid jati dan merbau EleganceWood Indonesia dengan finishing natural wood"
+              style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+            />
           </div>
           <div style={{ padding: "24px" }}>
             <p style={{ fontSize: "11px", fontWeight: 500, color: "#aaa", letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: "10px" }}>Material unggulan</p>
